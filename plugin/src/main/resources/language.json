@@ -1,9 +1,10 @@
 {
   "prefix": "<dark_gray>[<gold><bold>Catalyst</bold><dark_gray>]",
   "messages": {
-    "chatFormat": "<gray>%player%: <white>%message%",
+    "chatFormat": "<gray>%player% <dark_gray>» <white>%message%",
     "playerJoin": "<dark_gray>» <yellow>%player% <gray>has joined the game.",
     "playerQuit": "<dark_gray>« <red>%player% <gray>has left the game.",
-    "itemReceived": "<prefix> <yellow>%amount%x %itemStack% <gray>received."
+    "itemReceived": "<prefix> <yellow>%amount%x %itemStack% <gray>received.",
+    "skullReceived": "<prefix> <gray>Skull of <yellow>%player% <gray>received."
   }
 }

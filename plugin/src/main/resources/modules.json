@@ -3,6 +3,7 @@
     "ChatModule": true,
     "NotifierModule": true,
     "ItemModule": true,
+    "SkullModule": true,
     "EnderChestModule": true,
     "InvSeeModule": true
   }

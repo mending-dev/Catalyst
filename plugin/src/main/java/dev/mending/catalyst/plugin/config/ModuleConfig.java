@@ -29,6 +29,7 @@ public class ModuleConfig extends Configuration {
             ChatModule.class,
             NotifierModule.class,
             ItemModule.class,
+            SkullModule.class,
             EnderChestModule.class,
             InvSeeModule.class,
         };
