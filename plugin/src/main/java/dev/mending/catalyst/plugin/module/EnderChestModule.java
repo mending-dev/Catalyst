@@ -5,12 +5,14 @@ import dev.mending.catalyst.api.Module;
 import io.papermc.paper.command.brigadier.Commands;
 import io.papermc.paper.command.brigadier.argument.ArgumentTypes;
 import io.papermc.paper.command.brigadier.argument.resolvers.selector.PlayerSelectorArgumentResolver;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class EnderChestModule extends Module {
 
@@ -29,6 +31,13 @@ public class EnderChestModule extends Module {
                     return Command.SINGLE_SUCCESS;
                 })
                 .then(Commands.argument("player", ArgumentTypes.player())
+                    .suggests((ctx, builder) -> {
+                        Bukkit.getOnlinePlayers().stream()
+                            .map(Player::getName)
+                            .filter(name -> name.toLowerCase(Locale.ROOT).startsWith(builder.getRemainingLowerCase()))
+                            .forEach(builder::suggest);
+                        return builder.buildFuture();
+                    })
                     .requires(sender -> sender.getSender().hasPermission("catalyst.command.enderchest.other"))
                     .executes(ctx -> {
                         if (ctx.getSource().getSender() instanceof Player player) {
