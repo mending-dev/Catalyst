@@ -5,6 +5,9 @@
     "playerJoin": "<dark_gray>» <yellow>%player% <gray>has joined the game.",
     "playerQuit": "<dark_gray>« <red>%player% <gray>has left the game.",
     "itemReceived": "<prefix> <yellow>%amount%x %itemStack% <gray>received.",
-    "skullReceived": "<prefix> <gray>Skull of <yellow>%player% <gray>received."
+    "skullReceived": "<prefix> <gray>Skull of <yellow>%player% <gray>received.",
+    "itemRepaired": "<prefix> <gray>Item in your hand has been repaired.",
+    "itemRepairedAll": "<prefix> <gray>You repaired all items in your inventory.",
+    "noItemToRepair": "<prefix> <gray>You need to hold an item to repair!"
   }
 }

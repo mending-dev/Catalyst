@@ -5,6 +5,7 @@
     "ItemModule": true,
     "SkullModule": true,
     "EnderChestModule": true,
-    "InvSeeModule": true
+    "InvSeeModule": true,
+    "RepairModule": true
   }
 }

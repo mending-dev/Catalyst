@@ -32,6 +32,7 @@ public class ModuleConfig extends Configuration {
             SkullModule.class,
             EnderChestModule.class,
             InvSeeModule.class,
+            RepairModule.class,
         };
 
         for (Class<?> clazz : moduleClasses) {
