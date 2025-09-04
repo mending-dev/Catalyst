@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+jar.archiveBaseName = 'Catalyst'
+
+repositories {
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    compileOnly 'io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+def isSnapshot = version.endsWith('-SNAPSHOT')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'dev.mending.catalyst'
+            artifactId = 'api'
+            version = project.version
+
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = "CatalystRepo"
+            url = isSnapshot
+                    ? layout.buildDirectory.dir("repo/snapshots")
+                    : layout.buildDirectory.dir("repo/releases")
+        }
+    }
+}

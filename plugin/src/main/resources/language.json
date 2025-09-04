@@ -1,0 +1,9 @@
+{
+  "prefix": "<dark_gray>[<gold><bold>Catalyst</bold><dark_gray>]",
+  "messages": {
+    "chatFormat": "<gray>%player%: <white>%message%",
+    "playerJoin": "<dark_gray>» <yellow>%player% <gray>has joined the game.",
+    "playerQuit": "<dark_gray>« <red>%player% <gray>has left the game.",
+    "itemReceived": "<prefix> <yellow>%amount%x %itemStack% <gray>received."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "modules": {
+    "ChatModule": true,
+    "NotifierModule": true,
+    "ItemModule": true,
+    "EnderChestModule": true,
+    "InvSeeModule": true
+  }
+}
